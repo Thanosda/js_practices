@@ -4,17 +4,42 @@
 
 <input type="number" id="num" placeholder="Enter the number"> <br> <br>
 
-<button id="one">Check</button>
+<button id="one" onclick=guss()>Check</button>
 
 <h3 id="two">Result</h3>
+
+<h4 id="four">Score</h4>
+
 
 <script>
 var number1=document.getElementById("num");
 var button1=document.getElementById("one"); 
 var result1=document.getElementById("two");
+ var score1=document.getElementById("four");
+ 
+ var anything2=Math.floor((Math.random())*10)+1
+   fixednum=10;
 
- function guss{
-    
+ function guss(){
+
+    var randomn=Number(number1.value);
+    if(randomn==anything2){
+        
+         console.log(result1.textContent="You are right");
+          fixednum=fixednum+1;
+         console.log(fixednum);
+         alert("You won the game" );
+    }
+
+
+    else{
+        console.log(result1.textContent="You are wrong");
+           fixednum=fixednum-1;
+         console.log(fixednum);
+          alert("You lose the game" );
+    }
+    score1.textContent="Your score is :"+fixednum;
+
  }
 
 </script>
