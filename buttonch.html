@@ -1,0 +1,18 @@
+<button id="one" onclick="change()">Click me to Change</button>
+<style>
+    button{
+        background-color: lightblue;
+        width: 100px;
+        height: 50px;
+        border: 2px solid black;
+        border-radius: 5px;
+        transition: 2s;
+    }
+</style>
+<script>
+function change(){
+    var colo=document.getElementById("one")
+    colo.style.backgroundColor="darkblue"
+}
+
+</script>
